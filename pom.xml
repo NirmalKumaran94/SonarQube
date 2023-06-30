@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.mycompany.app</groupId>
+	<artifactId>hello-world-war</artifactId>
+	<version>17.06.2023-${env.BUILD_NUMBER}</version>
+	<packaging>war</packaging>
+	<name>Hello World Web Application Repository</name>
+	<description>Simplest possible Java Webapp</description>
+    <properties>
+        <maven.compiler.source>1.6</maven.compiler.source>
+        <maven.compiler.target>1.6</maven.compiler.target>
+    </properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>8.1.5.v20120716</version>
+				<configuration>
+					<scanIntervalSeconds>0</scanIntervalSeconds>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.1.1</version>
+			</plugin>
+		</plugins>
+	</build>
+ <repositories>
+    <repository>
+      <id>Maven_War-group</id>
+      <url>http://172.31.23.69:8081/repository/Maven_War-group/</url>
+    </repository>
+  </repositories>
+
+    <distributionManagement>
+    <snapshotRepository>
+      <id>Maven_War-snapshots</id>
+      <url>http://172.31.23.69:8081/repository/Maven_War-snapshots/</url>
+    </snapshotRepository>
+    <repository>
+      <id>Maven_War-releases</id>
+      <url>http://172.31.23.69:8081/repository/Maven_War-releases/</url>
+    </repository>
+  </distributionManagement>
+</project>
