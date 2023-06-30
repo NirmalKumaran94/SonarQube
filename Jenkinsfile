@@ -32,7 +32,7 @@ agent
             {
               withSonarQubeEnv("SonarQube")
                 {
-                   sh "${tool("SonarQube_Ver_4.8")}/bin/sonar-scanner -Dsonar.host.url=http://ec2-3-110-183-132.ap-south-1.compute.amazonaws.com:9000/ -Dsonar.login=sqp_bbb4bdd0b82e143f0dfeccf50dc6ec8e4ea013f7 -Dsonar.projectKey=Maven_War -Dsonar.java.binaries=target"
+                   sh "${tool("SonarQube_Ver_4.8")}/bin/sonar-scanner -Dsonar.host.url=http://ec2-13-126-177-156.ap-south-1.compute.amazonaws.com:9000/ -Dsonar.login=sqp_bbb4bdd0b82e143f0dfeccf50dc6ec8e4ea013f7 -Dsonar.projectKey=Maven_War -Dsonar.java.binaries=target"
                 }
             }
         }
